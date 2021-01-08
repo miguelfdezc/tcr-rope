@@ -37,7 +37,8 @@ class Substring(Rope):
 
 class Concatenation(Rope):
     def __init__(self, left, right):
-        pass
+        self.left = left
+        self.right = right
 
     def __str__(self):
         return "abcde"
