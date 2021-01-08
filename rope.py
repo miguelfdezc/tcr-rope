@@ -19,9 +19,12 @@ class Rope:
         return self.string
 
     def substring(self,start,length):
-        return Substring()
+        return Substring(self, start, length)
 
 class Substring:
+    def __init__(self, rope, start, length):
+        pass
+    
     def __str__(self):
         return "bcd"
 
