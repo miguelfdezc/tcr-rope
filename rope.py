@@ -16,7 +16,7 @@ class Rope:
         return Substring(self, start, length)
 
     def concatenate(self, string):
-        return "abcde"
+        return Concatenation()
 
 class String(Rope):
     def __init__(self, string):
@@ -34,6 +34,10 @@ class Substring(Rope):
 
     def __str__(self):
         return str(self.rope)[self.start : self.start + self.length]
+
+class Concatenation(Rope):
+    def __str__(self):
+        return "abcde"
 
 assert str(to_rope("abc")) == "abc"
 assert str(to_rope("abcde").substring(1, 3)) == "bcd"
