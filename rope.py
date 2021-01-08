@@ -8,10 +8,13 @@
 
 # API
 def to_rope(string):
-    return Rope(string)
+    return String(string)
 
 
 class Rope:
+    pass
+
+class String:
     def __init__(self, string):
         self.string = string
 
