@@ -13,8 +13,8 @@ def to_rope(string):
 
 class Rope:
     def __init__(self, string):
-        pass
-    
+        self.string = string
+
     def __str__(self):
         return "abc"
 
