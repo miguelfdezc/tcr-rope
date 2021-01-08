@@ -3,8 +3,6 @@
 # to do
 # insert
 # delete
-# substring
-# concatenation
 
 # API
 def to_rope(string):
