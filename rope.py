@@ -34,3 +34,4 @@ class Substring(Rope):
 
 assert str(to_rope("abc")) == "abc"
 assert str(to_rope("abcde").substring(1, 3)) == "bcd"
+assert str(to_rope("abcde").substring(1, 3).substring(1,1)) == "c"
