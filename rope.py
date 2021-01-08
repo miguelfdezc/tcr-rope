@@ -23,7 +23,7 @@ class String(Rope):
         return self.string
 
     
-class Substring:
+class Substring(Rope):
     def __init__(self, rope, start, length):
         self.rope = rope
         self.start = start
