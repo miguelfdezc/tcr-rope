@@ -27,6 +27,9 @@ class Rope:
         right = self.substring(start, self.length() - start)
         return left.concatenate(rope).concatenate(right)
 
+    def length(self):
+        raise Exception("Should have been overridden")
+
 
 class String(Rope):
     def __init__(self, string):
