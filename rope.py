@@ -13,6 +13,8 @@ class Rope:
         return Concatenation(self, addend)
 
     def __getitem__(self, index):
+        if type(index) == int:
+            pass
         return Substring(self, index.start, index.stop - index.start)
 
     def delete(self, start, length):
