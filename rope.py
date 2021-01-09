@@ -22,7 +22,9 @@ class Rope:
         return left.concatenate(right)
 
     def insert(self, rope, start):
-        return "abcde"
+        left = self.substring(0, start)
+        right = self.substring(start, self.length() - start)
+        return left.concatenate(rope).concatenate(right)
 
 
 class String(Rope):
