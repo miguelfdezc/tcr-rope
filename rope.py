@@ -30,7 +30,7 @@ class String(Rope):
         return left.concatenate(right)
 
     def length(self):
-        return 5
+        return len(self.string)
 
     
 class Substring(Rope):
