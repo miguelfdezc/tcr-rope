@@ -72,7 +72,7 @@ class Concatenation(Rope):
         return self.left.length() + self.right.length()
 
     def __len__(self):
-        return self.left.length() + self.right.length()
+        return len(self.left) + self.right.length()
 
 
 # Testing Framework
