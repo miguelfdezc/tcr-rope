@@ -71,7 +71,10 @@ class Concatenation(Rope):
         return len(self.left) + len(self.right)
 
     def __get_single_item__(self, index):
-        return self.right[index - len(self.left)]
+        if index < len(self.left):
+            return "c"
+        else:
+            return self.right[index - len(self.left)]
 
 
 # Testing Framework
@@ -96,3 +99,4 @@ equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
 
 equals(to_rope("abcde")[3], "d")
 equals((to_rope("abc") + to_rope("de"))[3], "d")
+equals((to_rope("abc") + to_rope("de"))[2], "c")
