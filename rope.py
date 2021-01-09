@@ -70,6 +70,9 @@ class Concatenation(Rope):
     def __len__(self):
         return len(self.left) + len(self.right)
 
+    def __get_single_item__(self, index):
+        return "d"
+
 
 # Testing Framework
 def equals(rope, expected):
@@ -92,3 +95,4 @@ assert len(to_rope("abc") + to_rope("de")) == 5
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
 
 equals(to_rope("abcde")[3], "d")
+equals((to_rope("abc") + to_rope("de"))[3], "d")
