@@ -19,6 +19,7 @@ class Rope:
 
     def __getitem__(self, slice):
         print(slice)
+        return self.substring(slice.start, slice.stop - slice.start)
 
     def delete(self, start, length):
         left = self.substring(0, start)
