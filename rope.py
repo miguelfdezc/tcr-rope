@@ -24,7 +24,7 @@ class Rope:
 
     def insert(self, rope, start):
         left = self.substring(0, start)
-        right = self.substring(start, self.length() - start)
+        right = self.substring(start, len(self) - start)
         return left.concatenate(rope).concatenate(right)
 
     def length(self):
