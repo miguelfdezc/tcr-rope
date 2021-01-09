@@ -16,6 +16,11 @@ class Rope:
     def concatenate(self, right):
         return Concatenation(self, right)
 
+    def delete(self, start, length):
+        left = self.substring(0, start)
+        right = self.substring(start + length, self.length() - start - length)
+        return left.concatenate(right)
+
 
 class String(Rope):
     def __init__(self, string):
