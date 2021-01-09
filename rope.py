@@ -1,8 +1,6 @@
 # Rope
 
 # to do
-# [] notation
-# + for concatenation
 # reorder Rope
 
 # API
