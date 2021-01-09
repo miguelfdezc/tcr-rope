@@ -21,7 +21,7 @@ class Rope:
         return self.substring(slice.start, slice.stop - slice.start)
 
     def delete(self, start, length):
-        left = self.substring(0, start)
+        left = self[0:start]
         right = self.substring(start + length, len(self) - start - length)
         return left + right
 
