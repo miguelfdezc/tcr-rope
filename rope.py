@@ -45,7 +45,7 @@ class String(Rope):
         return len(self.string)
 
     def __get_single_item__(self, index):
-        return "d"
+        return self.string[index]
     
 class Substring(Rope):
     def __init__(self, rope, start, length):
