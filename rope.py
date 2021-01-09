@@ -42,7 +42,7 @@ class String(Rope):
         return len(self.string)
 
     def __len__(self):
-        return self.length()
+        return len(self.string)
 
     
 class Substring(Rope):
