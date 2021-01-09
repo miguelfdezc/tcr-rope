@@ -1,22 +1,11 @@
 # Rope
 
-# to do
-# reorder Rope
-
 # API
 def to_rope(string):
     return String(string)
 
 
 class Rope:
-    def __add__(self, addend):
-        return Concatenation(self, addend)
-
-    def __getitem__(self, index):
-        if type(index) == int:
-            return self.__get_single_item__(index)
-        return Substring(self, index.start, index.stop - index.start)
-
     def delete(self, start, length):
         left = self[0:start]
         right = self[start + length : len(self)]
@@ -26,6 +15,14 @@ class Rope:
         left = self[0:start]
         right = self[start : len(self)]
         return left + rope + right
+
+    def __add__(self, addend):
+        return Concatenation(self, addend)
+
+    def __getitem__(self, index):
+        if type(index) == int:
+            return self.__get_single_item__(index)
+        return Substring(self, index.start, index.stop - index.start)
 
     def __len__(self):
         raise Exception("Should have been overriden")
