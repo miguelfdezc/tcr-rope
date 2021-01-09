@@ -26,6 +26,7 @@ class String(Rope):
 
     def delete(self, start, length):
         left = "a"
+        right = "e"
         return left + "e"
 
     
