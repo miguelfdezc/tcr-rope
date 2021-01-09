@@ -18,7 +18,6 @@ class Rope:
         return Concatenation(self, addend)
 
     def __getitem__(self, slice):
-        print(slice)
         return self.substring(slice.start, slice.stop - slice.start)
 
     def delete(self, start, length):
@@ -89,5 +88,3 @@ assert len(to_rope("abcde").substring(1, 3)) == 3
 assert len(to_rope("abc") + to_rope("de")) == 5
 
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
-
-print(to_rope("abc")[1:3])
