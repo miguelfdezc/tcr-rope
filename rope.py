@@ -27,9 +27,6 @@ class Rope:
         right = self.substring(start, len(self) - start)
         return left.concatenate(rope).concatenate(right)
 
-    def length(self):
-        raise Exception("Should have been overridden")
-
     def __len__(self):
         raise Exception("Should have been overriden")
 
@@ -40,9 +37,6 @@ class String(Rope):
 
     def __str__(self):
         return self.string
-
-    def length(self):
-        return len(self.string)
 
     def __len__(self):
         return len(self.string)
@@ -57,9 +51,6 @@ class Substring(Rope):
     def __str__(self):
         return str(self.rope)[self.start : self.start + self.leng]
 
-    def length(self):
-        return self.leng
-
     def __len__(self):
         return self.leng
 
@@ -70,9 +61,6 @@ class Concatenation(Rope):
 
     def __str__(self):
         return str(self.left) + str(self.right)
-
-    def length(self):
-        return self.left.length() + self.right.length()
 
     def __len__(self):
         return len(self.left) + len(self.right)
