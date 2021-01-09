@@ -4,7 +4,7 @@
 def to_rope(string):
     return String(string)
 
-
+# Implementation
 class Rope:
     def delete(self, start, length):
         left = self[0:start]
