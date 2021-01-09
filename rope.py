@@ -72,7 +72,7 @@ class Concatenation(Rope):
 
     def __get_single_item__(self, index):
         if index < len(self.left):
-            return "c"
+            return self.left[index]
         else:
             return self.right[index - len(self.left)]
 
