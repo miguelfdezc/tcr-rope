@@ -88,4 +88,4 @@ assert len(to_rope("abc") + to_rope("de")) == 5
 
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
 
-to_rope("abcde")[3]
+print(to_rope("abcde")[3])
