@@ -71,7 +71,7 @@ class Concatenation(Rope):
         return len(self.left) + len(self.right)
 
     def __get_single_item__(self, index):
-        return "d"
+        return self.right[index - len(self.left)]
 
 
 # Testing Framework
