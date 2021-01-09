@@ -9,7 +9,7 @@
       "commands": [
         {
           "match": ".*py",
-          "cmd": "cd ${workspaceFolder} && python ${file} > ../tcrfeedback 2>&1 && git commit -am working || git reset --hard"
+          "cmd": "cd ${workspaceFolder} && python ${file} && git commit -am working || git reset --hard"
         }
       ]
     }
