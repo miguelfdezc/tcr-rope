@@ -68,7 +68,7 @@ def equals(rope, expected):
     actual = str(rope)
     if actual == expected:
         return
-    print(actual, " didn't equal ", expected)
+    print(actual, "didn't equal", expected)
     raise Exception()
 
 
