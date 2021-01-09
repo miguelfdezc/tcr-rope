@@ -17,8 +17,8 @@ class Rope:
     def __add__(self, addend):
         return Concatenation(self, addend)
 
-    def __getitem__(self, param):
-        print(param)
+    def __getitem__(self, slice):
+        print(slice)
 
     def delete(self, start, length):
         left = self.substring(0, start)
