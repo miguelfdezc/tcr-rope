@@ -29,11 +29,6 @@ class String(Rope):
     def __str__(self):
         return self.string
 
-    def delete(self, start, length):
-        left = self.substring(0, start)
-        right = self.substring(start + length, self.length() - start - length)
-        return left.concatenate(right)
-
     def length(self):
         return len(self.string)
 
