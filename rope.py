@@ -3,6 +3,7 @@
 # to do
 # [] notation
 # + for concatenation
+# reorder Rope
 
 # API
 def to_rope(string):
