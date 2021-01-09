@@ -30,6 +30,9 @@ class Rope:
     def length(self):
         raise Exception("Should have been overridden")
 
+    def __len__(self):
+        raise Exception("Should have been overriden")
+
 
 class String(Rope):
     def __init__(self, string):
