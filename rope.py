@@ -14,8 +14,7 @@ class Rope:
 
     def __getitem__(self, index):
         if type(index) == int:
-            print("here")
-            return
+            return self.__get_single_item__(index)
         return Substring(self, index.start, index.stop - index.start)
 
     def delete(self, start, length):
@@ -42,6 +41,8 @@ class String(Rope):
     def __len__(self):
         return len(self.string)
 
+    def __get_single_item__(self, index):
+        return "d"
     
 class Substring(Rope):
     def __init__(self, rope, start, length):
