@@ -57,6 +57,9 @@ class Substring(Rope):
     def length(self):
         return self.leng
 
+    def __len__(self):
+        return self.leng
+
 class Concatenation(Rope):
     def __init__(self, left, right):
         self.left = left
