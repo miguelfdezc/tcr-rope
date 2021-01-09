@@ -14,7 +14,8 @@ class Rope:
 
     def __getitem__(self, index):
         if type(index) == int:
-            pass
+            print("here")
+            return
         return Substring(self, index.start, index.stop - index.start)
 
     def delete(self, start, length):
@@ -85,3 +86,5 @@ assert len(to_rope("abcde")[1:4]) == 3
 assert len(to_rope("abc") + to_rope("de")) == 5
 
 equals(to_rope("abe").insert(to_rope("cd"), 2), "abcde")
+
+to_rope("abcde")[3]
